@@ -22,5 +22,11 @@ Zadanie 3
  1) CREATE TABLE izba ( adres_budynku VARCHAR (40) NOT NULL, nazwa_izby VARCHAR(15) NOT NULL, metraz INT UNSIGNED, wlasciciel VARCHAR(10) REFERENCES postac (nazwa) ON DELETE SET NULL, PRIMARY KEY (adres_budynku, nazwa_izby));
 
  2) ALTER TABLE izba ADD COLUMN kolor_izby VARCHAR(15) DEFAULT('Czarny') AFTER metraz;
+ 
+ 3) INSERT INTO izba (adres_budynku, nazwa_izby, metraz, wlasciciel) VALUES ('Sloneczna 54', 'spizarnia', 25, 1);
+ 
+Zadanie 4
+
+1) 
 
 
