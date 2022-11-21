@@ -27,6 +27,26 @@ Zadanie 3
  
 Zadanie 4
 
-1) 
+1) CREATE TABLE przetwory ( id_przetworu INT(11) PRIMARY KEY AUTO_INCREMENT, rok_ produkcji SMALLINT UNSIGNED DEFAULT '1654', id_wykonawcy INT(11), zawartosc VARCHAR(40) NOT NULL, dodatek VARCHAR(40) DEFAULT 'papryczka chilli', id_konsumenta INT(11), FOREIGN KEY (id_wykonawcy) REFERENCES postac(id_postaci), FOREIGN KEY (id_konsumenta) REFERENCES postac(id_postaci);
 
+Zadanie 5 
+
+1) INSERT INTO postac (id_postaci, nazwan rodzaj, data_ur, wiek) VALUES (4, 'Dzejson', 'wiking', '0845-07-12', 20), (5, 'Pawel', 'wiking', '0850-12-12', 15), (6, 'Andrzej', 'wiking', '0846-01-25', 19), (7, 'Krzychu', 'wiking', '0845-10-23', 20), (8, 'LaTeX', 'wiking', '0840-12-01', 25);
+
+2) CREATE TABLE statek ( nazwa VARCHAR(40) NOT NULL PRIMARY KEY, rodzaj ENUM('tratwa', 'kajak', 'ponton') NOT NULL, data_wodowania DATE NOT NULL, max_ladownosc INT UNSIGNED NOT NULL); 
+
+3) INSERT INTO statek (nazwa, rodzaj, data_wodowania, max_ladownosc) VALUES ('Jacek', 'ponton', '0846-11-15', 15000), ('Placek', 'tratwa', '0844-11-14', 1000);
+
+4) ALTER TABLE postac ADD COLUMN funkcja VARCHAR(40);
+
+5) UPDATE postac SET funkcja = 'kapitan' WHERE nazwa = 'Bjorn';
+
+6) ALTER TABLE postac ADD FOREIGN KEY (statek) REFERENCES statek(nazwa);
+
+7) UPDATE pistac set statek = 'Placek' WHERE rodzaj = 'wiking';
+
+8) DELETE FROM izba WHERE nazwa_izby = 'spizarnia';
+
+9) DROP TABLE izba;
+  
 
