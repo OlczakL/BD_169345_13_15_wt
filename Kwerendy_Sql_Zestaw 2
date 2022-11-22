@@ -1,0 +1,26 @@
+Zadanie 1
+
+a) delete from postac where data_ur='0840-12-01'; 
+   delete from postac where data_ur='0845-07-12';
+
+b) alter table postac drop constraint postac_ibfk_1;
+   alter table przetwory drop constraint przetwory_ibfk_1;
+   alter table przetwory drop constraint przetwory_ibfk_2;
+   alter table postac modify id_postaci int not null;
+   alter table postac drop primary key;
+
+Zadanie 2 
+
+a) alter table postac add pesel varchar(11) not null;
+
+b) alter table postac modify rodzaj enum('wiking', 'ptak', 'kobieta', 'syrena');
+
+c) insert into postac ( id_postaci, nazwa, rodzaj, data_ur, wiek, pesel) values (8, 'Gertuda Nieszczera', 'syrena', '0830-12-12', 30, '666');
+
+Zadanie 3 
+
+a) update postac set statek='tratwa' where nazwa regexp 'a';
+
+b) update statek set max_ladownosc = max_ladownosc * 0,7 where data wodowania >= '1901-01-01' or data_wodowania <= '2000-12-31';
+
+c) 
