@@ -33,6 +33,21 @@ a) alter table postac modify rodzaj enum('wiking', 'ptak', 'kobieta', 'syrena', 
    
 b) create table marynarz as select * from postac;
 
-c) 
+c) alter table postac add primary key (pesel);
+
+Zadanie 5 
+
+a) update postac set statek = NULL where statek = 'tratwa';
+  
+b) delete from postac where id_postaci = 4;
+
+c) delete from statek;
+   
+d) drop table statek;
+
+e) create table zwierz (id int not null primary key auto_increment, nazwa varchar(40), wiek int);
+
+f) insert into zwierz (id, nazwa, wiek) values (1, 'Drozd', 42), (2, 'Waz Loko', 504);
+
  
 
