@@ -23,4 +23,16 @@ a) update postac set statek='tratwa' where nazwa regexp 'a';
 
 b) update statek set max_ladownosc = max_ladownosc * 0,7 where data wodowania >= '1901-01-01' or data_wodowania <= '2000-12-31';
 
+c) alter table postac add check(wiek <= 1000);
+
+Zadanie 4 
+
+a) alter table postac modify rodzaj enum('wiking', 'ptak', 'kobieta', 'syrena', 'waz');
+   
+   insert into postac (id_postaci, nazwa, rodzaj, data_ur, wiek, funkcja, statek, pesel) values (10, 'W Loko', 'waz', '0341-12-12', 504, null, null, '888');
+   
+b) create table marynarz as select * from postac;
+
 c) 
+ 
+
