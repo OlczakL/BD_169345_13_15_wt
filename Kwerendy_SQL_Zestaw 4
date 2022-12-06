@@ -1,1 +1,10 @@
-Tutaj zaczne swoja prace tegp 
+Zadanie 1 
+a) SELECT AVG(waga) AS srednia_waga FROM kreatura where rodzaj = 'wiking';
+b) SELECT rodzaj, COUNT(rodzaj) AS liczba_kreatur, AVG(waga) as srednia_waga FROM kreatura GROUP BY rodzaj;
+c) SELECT ROUND(AVG(1700 - YEAR(dataUr)), 2) AS sredni_wiek FROM kreatura;
+d) SELECT ROUND(AVG(YEAR(CURDATE()) - YEAR(dataUr)), 2) AS sredni_wiek FROM kreatura;
+
+Zadanie 2 
+a) SELECT rodzaj, SUM(waga) as laczna_waga FROM zasob GROUP by rodzaj;
+b) SELECT nazwa,ROUND( AVG(waga),2) AS srednia_waga FROM zasob WHERE ilosc >= '4' AND (SELECT SUM(waga) FROM zasob) > '10' GROUP BY nazwa;
+c) SELECT rodzaj, COUNT(DISTINCT(nazwa)) FROM zasob GROUP BY rodzaj HAVING SUM(ilosc) >1;
